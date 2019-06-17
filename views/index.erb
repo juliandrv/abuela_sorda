@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Abuela Sorda</h1>
+  <% if @abuela %>
+    <p>Mi Abuela dice: "<span id="abuela-dice"><%= @abuela %></span>"</p>
+  <% end %>
+
+  <!-- this form sends data (the <input> elements) to the
+       URL '/grandma' using the HTTP verb 'post', which
+       matches the 'post /grandma' route defined in
+       app/controller/index.rb -->
+  <form action="/abuela" method="post">
+    Di algo Abuela:
+    <br>
+    <input type="text" name="input_usuario">
+    <input type="submit" value="Dilo!">
+  </form>
+</div>

@@ -1,0 +1,17 @@
+require 'sinatra'
+require 'sinatra/reloader'
+
+
+get '/' do
+	@abuela = params[:abuela]
+	erb :abuelita
+end
+
+post '/abuela' do
+  if params[:input_usuario] == params[:input_usuario].upcase
+    @abuela = "manzana"
+  else
+    @abuela = "Habla mas duro mijito"
+  end
+  redirect "/?abuela=#{@abuela}"
+end
