@@ -4,7 +4,7 @@ require 'sinatra/reloader'
 
 get '/' do
 	@abuela = params[:abuela]
-	erb :abuelita
+	erb :index
 end
 
 post '/abuela' do
