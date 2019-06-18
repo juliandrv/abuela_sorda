@@ -1,6 +1,4 @@
 require 'sinatra'
-require 'sinatra/reloader'
-
 
 get '/' do
   erb :index
@@ -16,5 +14,4 @@ post '/' do
    <h1>Habla mas duro mijito</h1>
    HTML
   end
-  #redirect "/?abuela=#{@abuela}"
 end
