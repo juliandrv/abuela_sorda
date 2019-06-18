@@ -6,15 +6,6 @@
 </head>
 <body>
   <div class="container">
-  <h1>Abuela Sorda</h1>
-  <% if @abuela %>
-    <h1><%= @abuela %></h1>
-  <% end %>
-
-  <!-- this form sends data (the <input> elements) to the
-       URL '/grandma' using the HTTP verb 'post', which
-       matches the 'post /grandma' route defined in
-       app/controller/index.rb -->
   <form action="/" method="post">
     Di algo Abuela:
     <br>
