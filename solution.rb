@@ -3,15 +3,16 @@ require 'sinatra/reloader'
 
 
 get '/' do
-	@abuela = params[:abuela]
-	erb :index
+  @abuela = params[:abuela]
+  # mira en views/index.erb para ver que hay en esta vista
+  erb :index
 end
 
-post '/abuela' do
+post '/' do
   if params[:input_usuario] == params[:input_usuario].upcase
-    @abuela = "manzana"
+    @abuela = "<h1>Ahh sí, manzana!</h1"
   else
-    @abuela = "Habla mas duro mijito"
+    @abuela = "<h1>Habla mas duro mijito</h1>"
   end
-  redirect "/?abuela=#{@abuela}"
+  #redirect "/?abuela=#{@abuela}"
 end
